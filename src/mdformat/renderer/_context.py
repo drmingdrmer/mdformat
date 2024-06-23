@@ -111,13 +111,13 @@ def text(node: RenderTreeNode, context: RenderContext) -> str:
 
     # Escape backslash to prevent it from making unintended escapes.
     # This escape has to be first, else we start multiplying backslashes.
-    text = text.replace("\\", "\\\\")
+    #  text = text.replace("\\", "\\\\")
 
-    text = escape_asterisk_emphasis(text)  # Escape emphasis/strong marker.
+    #  text = escape_asterisk_emphasis(text)  # Escape emphasis/strong marker.
     text = escape_underscore_emphasis(text)  # Escape emphasis/strong marker.
-    text = text.replace("[", "\\[")  # Escape link label enclosure
-    text = text.replace("]", "\\]")  # Escape link label enclosure
-    text = text.replace("<", "\\<")  # Escape URI enclosure
+    #  text = text.replace("[", "\\[")  # Escape link label enclosure
+    #  text = text.replace("]", "\\]")  # Escape link label enclosure
+    #  text = text.replace("<", "\\<")  # Escape URI enclosure
     text = text.replace("`", "\\`")  # Escape code span marker
 
     # Escape "&" if it starts a sequence that can be interpreted as
